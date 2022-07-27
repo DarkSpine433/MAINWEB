@@ -1,13 +1,25 @@
 .preload{
+    opacity: 100%;
+    pointer-events: none;
     background-color: black;
     overflow: hidden;
-    height: 100vh;
-    width: 100vw;
+    height: 0vh;
+    width: 0vw;
     z-index: 1000;
     justify-content: center;
     align-items:center ;
     align-content: center;
     text-align: center;
+    animation: hidde-load 10s forwards;
+    @keyframes hidde-load {
+      0%{
+        opacity: 100%;
+      }
+      100%{
+        opacity: 0%;
+      }
+      
+    }
 }
 #vid-preload{
     overflow: hidden;
@@ -16,6 +28,16 @@
     height: 100vh;
     left: 0;
     object-fit: cover;
+    animation: hidde-load-vid 1s forwards;
+    @keyframes hidde-load-vid {
+      0%{
+        opacity: 100%;
+      }
+      100%{
+        opacity: 0%;
+      }
+      
+    }
 }
 #content_preload{
     position: fixed;
@@ -23,15 +45,25 @@
     align-items:center ;
     align-content: center;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.062);
     width: 20%;
     min-width: 220px;
-    height: .3vh;
+    height: .6vh;
     z-index: 1001;
     left: 50%;
-    top: 50%;
+    bottom:  10%;
     transform: translateX(-50%);
     overflow: hidden;
+    animation: hidde-load-bar 0.5s forwards;
+    @keyframes hidde-load-bar {
+      0%{
+        opacity: 100%;
+      }
+      100%{
+        opacity: 0%;
+      }
+      
+    }
 }
 #overflow_animation{
     justify-content: center;
@@ -42,7 +74,7 @@
     background-color: rgb(168, 35, 35);
     height: 100%;
     z-index: 1002;
-    animation: bar_animation .5s infinite alternate ease-in-out;
+    animation: bar_animation .6s infinite alternate ease-in-out;
     
     @keyframes bar_animation {
       0%{
