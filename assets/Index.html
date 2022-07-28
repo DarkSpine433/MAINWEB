@@ -14,8 +14,11 @@
         <meta name="google-site-verification" content="gUD-dt_0Sdte21pDW6VtyBA_BrruMng7XhdhPHzi3I8" />
         
         <link href="./code/Styles/style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <script defer src="./code/JavaScript/preload.js"></script>
+        <script defer src="./code/JavaScript/Index.js"></script>
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- FireBase -->
@@ -58,7 +61,7 @@
         <div class="preload">
             
             <video id="vid-preload" autoplay muted loop>
-                <source id="vid-preload" src="./vid/preload.mp4" type="video/mp4">
+                <source id="vid-preload" src="./vid/loading.mp4" type="video/mp4">
             </video>
             <div id="content_preload">
                
@@ -67,14 +70,24 @@
                 </div>
             </div>
         </div>
-        
-        <header>
+        <header id="navbar">
+          
+            <img  id="img-bar" src="https://i.ibb.co/LNcNqmn/Png-Item-3526345.png" alt="Png-Item-3526345" border="0">
+      
             <nav>
-
+               
+                <ul>
+                    <a href="#Services"><li>Services</li></a>
+                    <a href="#About"><li>About</li></a>
+                    <a href="#Contact"><li>Contact</li></a>
+                </ul>
             </nav>
         </header>
         <main>
-            Technical Break
+           
+            <video id="vid-main" autoplay muted loop>
+                <source id="vid-main-source" src="./vid/preload.mp4" type="video/mp4">
+            </video>
         </main>
         <footer>
 

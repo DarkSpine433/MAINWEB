@@ -1,7 +1,7 @@
 .preload{
-    opacity: 100%;
-    pointer-events: none;
-    background-color: black;
+    display: block;
+    pointer-events:all;
+    background-color: rgb(12, 12, 12);
     overflow: hidden;
     height: 0vh;
     width: 0vw;
@@ -10,62 +10,47 @@
     align-items:center ;
     align-content: center;
     text-align: center;
-    animation: hidde-load 10s forwards;
+    animation: hidde-load 3s alternate infinite ease-in-out;
     @keyframes hidde-load {
       0%{
-        opacity: 100%;
+
       }
       100%{
-        opacity: 0%;
+        
+       
       }
       
     }
 }
 #vid-preload{
+  position: fixed;
     overflow: hidden;
-    position: absolute;
     width: 100vw;
     height: 100vh;
     left: 0;
     object-fit: cover;
-    animation: hidde-load-vid 1s forwards;
-    @keyframes hidde-load-vid {
-      0%{
-        opacity: 100%;
-      }
-      100%{
-        opacity: 0%;
-      }
-      
-    }
+    z-index: 1000;
+
 }
 #content_preload{
+    z-index: 1000;
     position: fixed;
     justify-content: center;
     align-items:center ;
     align-content: center;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.062);
-    width: 20%;
+    width: 25%;
     min-width: 220px;
-    height: .6vh;
+    height: .2vh;
     z-index: 1001;
     left: 50%;
-    bottom:  10%;
+    bottom:  50%;
     transform: translateX(-50%);
     overflow: hidden;
-    animation: hidde-load-bar 0.5s forwards;
-    @keyframes hidde-load-bar {
-      0%{
-        opacity: 100%;
-      }
-      100%{
-        opacity: 0%;
-      }
-      
-    }
 }
 #overflow_animation{
+    z-index: 1000;
     justify-content: center;
     align-items:center ;
     align-content: center;
