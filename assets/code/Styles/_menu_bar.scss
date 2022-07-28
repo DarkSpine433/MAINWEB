@@ -3,7 +3,7 @@ header{
     position: fixed;
     width: 100%;
     background-color:none ;
-    height: 7vh;
+    height: 10vh;
     display: flex;
 }
 
@@ -19,54 +19,96 @@ header{
     transition: top .3s ease-in-out;
   }
 nav{
-    margin-right: 10%;
+    margin-right: 5%;
     justify-content: right;
     align-items:right ;
     align-content: right;
     text-align: right;
     display: flex;
-    flex-wrap: wrap;
     position: absolute;
-    
     object-fit: fill;
     height: 100%;
     right: 0;
     top: 0;
-    transition: all .2s ease-in-out;
+    transition: all .15s ease-in-out;
     &:hover{
         
     }
     
 }
 #img-bar{
- 
     margin-left: 10%;
-    margin-top: .7vh;
+    margin-top: clamp(.8rem, 2.5vh, 100rem);
     height: 80%;
     width: 1;
 }
-
-ul{
-    
+#LOGO-bar{
+    justify-content: center;
+    align-items: center ;
+    align-content:  center;
+    text-align:  center;
+    object-fit: fill;
+    height: 100%;
+    z-index: 100;
+    width: 100%;
+    background-color:none ;
+    height: 10vh;
+    display: flex;
   
+
+
+}
+#logo-bar-content{
+   
+    letter-spacing: 15px;
+    font-size: clamp(.8rem, 1.1vw, 50rem);
+    color: white;
+    text-shadow: 0px 0px 10px rgb(235, 235, 235);
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    &:hover{
+        letter-spacing: 16px;
+        color: rgb(48, 48, 48);
+        text-shadow: 0px 0px 10px rgb(0, 0, 0);
+        transform: scale(101%);
+    }
+    animation: pulse-effect 4s infinite alternate ease-in-out;
+    @keyframes pulse-effect {
+        0%{
+
+        }
+        100%{
+            letter-spacing: 16px;
+        }
+    }
+    @media (max-width:500px) {
+        line-height: 1.4rem;
+        
+        
+    }
+   
+}
+ul{
     display: flex;
     text-decoration: none;
     list-style: none;
     gap: 100px;
     li{ 
-        font-weight: b;
+        letter-spacing: 1px;
         font-size: clamp(1rem, 1vw, 500rem);
-        transition: all .2s ease-in-out;
+        transition: all .15s ease-in-out;
         cursor: pointer;
         color: white;
-        flex-direction:column;
         &:hover{
-            color: rgb(230, 230, 230);
-            text-shadow: 0px 0px 10px rgb(255, 255, 255);
-            transform: scale(110%);
+            color: rgb(255, 0, 0);
+            text-shadow: 0px 0px 10px rgb(255, 0, 0);
+            transform: scale(101%);
         }
     }
     a{
         text-decoration: none;
+    }
+    @media (max-width:1625px) {
+        display: none;
     }
 }

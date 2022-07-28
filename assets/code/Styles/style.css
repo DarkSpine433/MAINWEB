@@ -88,7 +88,7 @@ header {
   position: fixed;
   width: 100%;
   background-color: none;
-  height: 7vh;
+  height: 10vh;
   display: flex;
 }
 
@@ -105,26 +105,72 @@ header {
 }
 
 nav {
-  margin-right: 10%;
+  margin-right: 5%;
   justify-content: right;
   align-items: right;
   align-content: right;
   text-align: right;
   display: flex;
-  flex-wrap: wrap;
   position: absolute;
   -o-object-fit: fill;
      object-fit: fill;
   height: 100%;
   right: 0;
   top: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 #img-bar {
   margin-left: 10%;
-  margin-top: 0.7vh;
+  margin-top: clamp(0.8rem, 2.5vh, 100rem);
   height: 80%;
   width: 1;
+}
+
+#LOGO-bar {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 100%;
+  z-index: 100;
+  width: 100%;
+  background-color: none;
+  height: 10vh;
+  display: flex;
+}
+
+#logo-bar-content {
+  letter-spacing: 15px;
+  font-size: clamp(0.8rem, 1.1vw, 50rem);
+  color: white;
+  text-shadow: 0px 0px 10px rgb(235, 235, 235);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  -webkit-animation: pulse-effect 4s infinite alternate ease-in-out;
+          animation: pulse-effect 4s infinite alternate ease-in-out;
+}
+#logo-bar-content:hover {
+  letter-spacing: 16px;
+  color: rgb(48, 48, 48);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  transform: scale(101%);
+}
+@-webkit-keyframes pulse-effect {
+  100% {
+    letter-spacing: 16px;
+  }
+}
+@keyframes pulse-effect {
+  100% {
+    letter-spacing: 16px;
+  }
+}
+@media (max-width: 500px) {
+  #logo-bar-content {
+    line-height: 1.4rem;
+  }
 }
 
 ul {
@@ -134,20 +180,24 @@ ul {
   gap: 100px;
 }
 ul li {
-  font-weight: b;
+  letter-spacing: 1px;
   font-size: clamp(1rem, 1vw, 500rem);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   cursor: pointer;
   color: white;
-  flex-direction: column;
 }
 ul li:hover {
-  color: rgb(230, 230, 230);
-  text-shadow: 0px 0px 10px rgb(255, 255, 255);
-  transform: scale(110%);
+  color: rgb(255, 0, 0);
+  text-shadow: 0px 0px 10px rgb(255, 0, 0);
+  transform: scale(101%);
 }
 ul a {
   text-decoration: none;
+}
+@media (max-width: 1625px) {
+  ul {
+    display: none;
+  }
 }
 
 #vid-main {
@@ -178,4 +228,34 @@ body {
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
   height: 200vh;
+}
+
+#gradient_effect {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%);
+  position: fixed;
+  height: 100vh;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(26, 26, 26);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
 }/*# sourceMappingURL=style.css.map */
