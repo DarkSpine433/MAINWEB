@@ -18,7 +18,7 @@ body{
     margin: auto 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
+    background-color: #0a0a0a;
     height: 200vh;
 }
 #gradient_effect{
@@ -29,6 +29,7 @@ body{
     z-index: 99;
     width: 100%;
     top: 0;
+    pointer-events: none;
 }
 /* width */
 ::-webkit-scrollbar {

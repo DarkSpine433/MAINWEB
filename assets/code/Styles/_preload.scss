@@ -10,17 +10,6 @@
     align-items:center ;
     align-content: center;
     text-align: center;
-    animation: hidde-load 3s alternate infinite ease-in-out;
-    @keyframes hidde-load {
-      0%{
-
-      }
-      100%{
-        
-       
-      }
-      
-    }
 }
 #vid-preload{
   position: fixed;
@@ -30,7 +19,6 @@
     left: 0;
     object-fit: cover;
     z-index: 1000;
-
 }
 #content_preload{
     z-index: 1000;
@@ -60,7 +48,6 @@
     height: 100%;
     z-index: 1002;
     animation: bar_animation .6s infinite alternate ease-in-out;
-    
     @keyframes bar_animation {
       0%{
         transform: translateX(-120%);

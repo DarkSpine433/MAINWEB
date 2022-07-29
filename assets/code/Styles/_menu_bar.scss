@@ -11,7 +11,6 @@ header{
     background-color: rgba(14, 14, 14, 0.699) ;
 }
 #navbar {
-  
     position: fixed;
     top: 0;
     width: 100%;
@@ -19,29 +18,20 @@ header{
     transition: top .3s ease-in-out;
   }
 nav{
-    margin-right: 5%;
-    justify-content: right;
-    align-items:right ;
-    align-content: right;
-    text-align: right;
-    display: flex;
-    position: absolute;
-    object-fit: fill;
-    height: 100%;
-    right: 0;
-    top: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: -40px;
     transition: all .15s ease-in-out;
     &:hover{
-        
+        left: 0px;
+        li{
+            transform: translatex(0%);
+        }
     }
     
 }
-#img-bar{
-    margin-left: 10%;
-    margin-top: clamp(.8rem, 2.5vh, 100rem);
-    height: 80%;
-    width: 1;
-}
+
 #LOGO-bar{
     justify-content: center;
     align-items: center ;
@@ -54,31 +44,28 @@ nav{
     background-color:none ;
     height: 10vh;
     display: flex;
-  
-
-
 }
 #logo-bar-content{
-   
     letter-spacing: 15px;
     font-size: clamp(.8rem, 1.1vw, 50rem);
     color: white;
-    text-shadow: 0px 0px 10px rgb(235, 235, 235);
+    text-shadow: 0px 0px 10px rgb(41, 41, 41);
     cursor: pointer;
     transition: all .15s ease-in-out;
     &:hover{
         letter-spacing: 16px;
         color: rgb(48, 48, 48);
-        text-shadow: 0px 0px 10px rgb(0, 0, 0);
+        text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
         transform: scale(101%);
     }
-    animation: pulse-effect 4s infinite alternate ease-in-out;
+    animation: pulse-effect 1s infinite alternate ease-in-out;
     @keyframes pulse-effect {
         0%{
 
         }
         100%{
-            letter-spacing: 16px;
+          
+            text-shadow: 0px 0px 10px rgb(235, 235, 235);
         }
     }
     @media (max-width:500px) {
@@ -89,26 +76,72 @@ nav{
    
 }
 ul{
+    padding: 80px 10px;
+    justify-content: center;
+    align-items: center ;
+    align-content:  center;
+    text-align:  center;
+
+background: rgba(255, 255, 255, 0.12);
+border-radius: 10px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.3px);
+-webkit-backdrop-filter: blur(9.3px);
+border: 1px solid rgba(255, 255, 255, 0.31);
+    position: relative;
+    top: 50%;
+    width: min-content;
     display: flex;
     text-decoration: none;
     list-style: none;
-    gap: 100px;
-    li{ 
+    gap: 50px;
+    flex-direction: column;
+    transform: translateY(-50%);
+    transition: all .15s ease-in-out;
+    &:hover{
+        border-radius: 0px 20px 20px 0px;
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.6px);
+        -webkit-backdrop-filter: blur(5.6px);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    li{
+        transition: all .15s ease-in-out;
+        transform: translateX(-100%);
         letter-spacing: 1px;
         font-size: clamp(1rem, 1vw, 500rem);
-        transition: all .15s ease-in-out;
         cursor: pointer;
-        color: white;
+        color: rgb(255, 0, 0);
         &:hover{
-            color: rgb(255, 0, 0);
-            text-shadow: 0px 0px 10px rgb(255, 0, 0);
-            transform: scale(101%);
+            
+            #description-menu-option{
+                opacity: 100%;
+                transform: translate(80px,-35px);
+                text-shadow: 0px 0px 3px rgb(255, 0, 0);
+            }
+        }
+        #description-menu-option{
+            transition: all .15s ease-in-out;
+            opacity: 0%;
+            pointer-events: none;
+            position: absolute;
+            transform: translate(60px,-35px);
+        }
+        #img-svg-menu-option{
+            transition: all .15s ease-in-out;
+            fill: rgb(255, 255, 255);
+            width: 46px;
+          &:hover{
+           
+            fill: rgb(255, 0, 0);
+          }
         }
     }
     a{
         text-decoration: none;
     }
     @media (max-width:1625px) {
-        display: none;
+      
     }
 }
