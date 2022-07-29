@@ -101,6 +101,7 @@ header {
 }
 
 nav {
+  pointer-events: none;
   height: 100vh;
   position: fixed;
   top: 0px;
@@ -131,13 +132,13 @@ nav:hover li {
 
 #logo-bar-content {
   letter-spacing: 15px;
-  font-size: clamp(1rem, 1.1vw, 30rem);
+  font-size: clamp(1rem, 1.1vw, 80rem);
   color: white;
   text-shadow: 0px 0px 10px rgb(41, 41, 41);
   cursor: pointer;
   transition: all 0.15s ease-in-out;
-  -webkit-animation: pulse-effect 1s infinite alternate ease-in-out;
-          animation: pulse-effect 1s infinite alternate ease-in-out;
+  -webkit-animation: pulse-effect 3s infinite alternate ease-in-out;
+          animation: pulse-effect 3s infinite alternate ease-in-out;
 }
 #logo-bar-content:hover {
   letter-spacing: 16px;
@@ -147,12 +148,14 @@ nav:hover li {
 }
 @-webkit-keyframes pulse-effect {
   100% {
-    text-shadow: 0px 0px 10px rgb(235, 235, 235);
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+    transform: scale(102%);
   }
 }
 @keyframes pulse-effect {
   100% {
-    text-shadow: 0px 0px 10px rgb(235, 235, 235);
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+    transform: scale(102%);
   }
 }
 @media (max-width: 500px) {
@@ -162,7 +165,8 @@ nav:hover li {
 }
 
 ul {
-  padding: 80px 10px;
+  pointer-events: all;
+  padding: 0px 17px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -170,9 +174,9 @@ ul {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.3px);
-  -webkit-backdrop-filter: blur(9.3px);
-  border: 1px solid rgba(255, 255, 255, 0.31);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   position: relative;
   top: 50%;
   width: -webkit-min-content;
@@ -181,12 +185,13 @@ ul {
   display: flex;
   text-decoration: none;
   list-style: none;
-  gap: 50px;
   flex-direction: column;
   transform: translateY(-50%);
   transition: all 0.15s ease-in-out;
+  height: 30vh;
 }
 ul:hover {
+  height: 100vh;
   border-radius: 0px 20px 20px 0px;
   background: rgba(255, 255, 255, 0.01);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -194,18 +199,46 @@ ul:hover {
   -webkit-backdrop-filter: blur(5.6px);
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
+ul:hover #menu-word {
+  opacity: 0%;
+  transform: rotate(90deg) translateY(-90%);
+}
+ul #menu-word {
+  font-weight: bold;
+  pointer-events: none;
+  letter-spacing: 20px;
+  transition: all 0.15s ease-in-out;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  position: absolute;
+  transform: rotate(90deg) translateY(-100%);
+  -webkit-animation: pulse-effect-menu-word 1s infinite alternate ease-in-out;
+          animation: pulse-effect-menu-word 1s infinite alternate ease-in-out;
+}
+@-webkit-keyframes pulse-effect-menu-word {
+  100% {
+    transform: rotate(90deg) translateY(-100%) scale(102%);
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+  }
+}
+@keyframes pulse-effect-menu-word {
+  100% {
+    transform: rotate(90deg) translateY(-100%) scale(102%);
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+  }
+}
 ul li {
   transition: all 0.15s ease-in-out;
   transform: translateX(-100%);
   letter-spacing: 1px;
   font-size: clamp(1rem, 1vw, 500rem);
   cursor: pointer;
-  color: rgb(255, 0, 0);
 }
 ul li:hover #description-menu-option {
   opacity: 100%;
-  transform: translate(80px, -35px);
-  text-shadow: 0px 0px 3px rgb(255, 0, 0);
+  transform: translate(80px, -31px);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
 }
 ul li #description-menu-option {
   transition: all 0.15s ease-in-out;
@@ -217,10 +250,12 @@ ul li #description-menu-option {
 ul li #img-svg-menu-option {
   transition: all 0.15s ease-in-out;
   fill: rgb(255, 255, 255);
-  width: 46px;
+  width: 35px;
 }
 ul li #img-svg-menu-option:hover {
-  fill: rgb(255, 0, 0);
+  color: rgb(48, 48, 48);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
+  fill: rgb(48, 48, 48);
 }
 ul a {
   text-decoration: none;
@@ -285,12 +320,12 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: rgb(26, 26, 26);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(26, 26, 26);
+  background: rgb(255, 255, 255);
 }
 
 /* Handle on hover */

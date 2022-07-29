@@ -18,6 +18,7 @@ header{
     transition: top .3s ease-in-out;
   }
 nav{
+    pointer-events: none;
     height: 100vh;
     position: fixed;
     top: 0px;
@@ -47,7 +48,7 @@ nav{
 }
 #logo-bar-content{
     letter-spacing: 15px;
-    font-size: clamp(1rem, 1.1vw, 30rem);
+    font-size: clamp(1rem, 1.1vw, 80rem);
     color: white;
     text-shadow: 0px 0px 10px rgb(41, 41, 41);
     cursor: pointer;
@@ -58,14 +59,15 @@ nav{
         text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
         transform: scale(101%);
     }
-    animation: pulse-effect 1s infinite alternate ease-in-out;
+    animation: pulse-effect 3s infinite alternate ease-in-out;
     @keyframes pulse-effect {
         0%{
 
         }
         100%{
           
-            text-shadow: 0px 0px 10px rgb(235, 235, 235);
+            text-shadow: 0px 0px 3px rgb(255, 255, 255);
+            transform: scale(102%);
         }
     }
     @media (max-width:500px) {
@@ -76,35 +78,62 @@ nav{
    
 }
 ul{
-    padding: 80px 10px;
+    pointer-events: all;
+    padding: 0px 17px;
     justify-content: center;
     align-items: center ;
     align-content:  center;
     text-align:  center;
-
-background: rgba(255, 255, 255, 0.12);
-border-radius: 10px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(9.3px);
--webkit-backdrop-filter: blur(9.3px);
-border: 1px solid rgba(255, 255, 255, 0.31);
+  
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
     position: relative;
     top: 50%;
     width: min-content;
     display: flex;
     text-decoration: none;
     list-style: none;
-    gap: 50px;
     flex-direction: column;
     transform: translateY(-50%);
     transition: all .15s ease-in-out;
+    height: 30vh;
     &:hover{
+        height: 100vh;
         border-radius: 0px 20px 20px 0px;
         background: rgba(255, 255, 255, 0.01);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.6px);
         -webkit-backdrop-filter: blur(5.6px);
+        
         border: 1px solid rgba(255, 255, 255, 0.03);
+        #menu-word{
+            opacity: 0%;
+            transform: rotate(90deg) translateY(-90%);
+        }
+    }
+    #menu-word{
+        font-weight: bold;
+        pointer-events: none;
+        letter-spacing: 20px;
+        transition: all .15s ease-in-out;
+        color: rgb(255, 255, 255);
+        text-shadow: 0px 0px 10px rgb(255, 255, 255);
+        position: absolute;
+        transform: rotate(90deg) translateY(-100%);
+        animation: pulse-effect-menu-word 1s infinite alternate ease-in-out;
+        @keyframes pulse-effect-menu-word {
+            0%{
+
+            }
+            100%{
+                transform: rotate(90deg) translateY(-100%) scale(102%);
+                text-shadow: 0px 0px 3px rgb(255, 255, 255);
+            }
+        }
     }
     li{
         transition: all .15s ease-in-out;
@@ -112,13 +141,14 @@ border: 1px solid rgba(255, 255, 255, 0.31);
         letter-spacing: 1px;
         font-size: clamp(1rem, 1vw, 500rem);
         cursor: pointer;
-        color: rgb(255, 0, 0);
         &:hover{
             
             #description-menu-option{
+                
                 opacity: 100%;
-                transform: translate(80px,-35px);
-                text-shadow: 0px 0px 3px rgb(255, 0, 0);
+                transform: translate(80px,-31px);
+                color: rgb(255, 255, 255);
+                text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
             }
         }
         #description-menu-option{
@@ -131,10 +161,11 @@ border: 1px solid rgba(255, 255, 255, 0.31);
         #img-svg-menu-option{
             transition: all .15s ease-in-out;
             fill: rgb(255, 255, 255);
-            width: 46px;
+            width: 35px;
           &:hover{
-           
-            fill: rgb(255, 0, 0);
+            color: rgb(48, 48, 48);
+        text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
+            fill: rgb(48, 48, 48);
           }
         }
     }
