@@ -129,12 +129,13 @@ nav:hover li {
 }
 
 #LOGO-bar {
+  position: absolute;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-align: center;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   z-index: 100;
   width: 100%;
@@ -142,12 +143,20 @@ nav:hover li {
   height: 10vh;
   display: flex;
 }
+@media (max-width: 500px) {
+  #LOGO-bar {
+    transform: translateX(1.5%);
+  }
+}
+#LOGO-bar a {
+  text-decoration: none;
+}
 
 #logo-bar-content {
   letter-spacing: 15px;
   font-size: clamp(1rem, 1.1vw, 80rem);
   color: white;
-  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  text-shadow: 0px 0px 20px rgb(255, 255, 255);
   cursor: pointer;
   transition: all 0.15s ease-in-out;
   -webkit-animation: pulse-effect 3s infinite alternate ease-in-out;
@@ -161,13 +170,13 @@ nav:hover li {
 }
 @-webkit-keyframes pulse-effect {
   100% {
-    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
     transform: scale(102%);
   }
 }
 @keyframes pulse-effect {
   100% {
-    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
     transform: scale(102%);
   }
 }
@@ -307,7 +316,7 @@ ul li #description-menu-option {
   opacity: 0%;
   pointer-events: none;
   position: absolute;
-  transform: translate(60px, -3px);
+  transform: translate(60px, -31px);
 }
 @media (max-width: 500px) {
   ul li #description-menu-option {
@@ -333,6 +342,7 @@ ul a {
   -o-object-fit: cover;
      object-fit: cover;
   height: 80vh;
+  z-index: 2;
 }
 
 #vid-gradient {
@@ -347,6 +357,40 @@ ul a {
   background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgb(10, 10, 10) 100%);
 }
 
+#scroll-down {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4 !important;
+}
+
+#scroll-down-arrow {
+  border-radius: 100px;
+  transition: all 0.2s ease-in-out;
+  width: 70px;
+  fill: rgb(133, 133, 133);
+  -webkit-animation: pulse-effect-scroll-down 0.8s infinite alternate ease-in-out;
+          animation: pulse-effect-scroll-down 0.8s infinite alternate ease-in-out;
+}
+#scroll-down-arrow:hover {
+  fill: rgb(185, 1, 1) !important;
+  transform: scale(110%);
+  box-shadow: 0px 0px 120px rgb(48, 0, 0) !important;
+}
+@-webkit-keyframes pulse-effect-scroll-down {
+  100% {
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.527);
+    fill: rgb(255, 255, 255);
+  }
+}
+@keyframes pulse-effect-scroll-down {
+  100% {
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.527);
+    fill: rgb(255, 255, 255);
+  }
+}
+
 * {
   margin: auto 0;
   padding: 0;
@@ -357,6 +401,7 @@ html {
   margin: auto 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -371,7 +416,7 @@ body {
 
 #gradient_effect {
   background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%);
   position: fixed;
   height: 100vh;
   z-index: 99;
@@ -398,4 +443,10 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(0, 0, 0);
+}
+
+section {
+  height: 100vh;
+  overflow: hidden;
+  clear: both;
 }/*# sourceMappingURL=style.css.map */

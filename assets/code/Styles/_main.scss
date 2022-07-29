@@ -3,7 +3,9 @@
     width: 100%;
     object-fit: cover;
     height: 80vh;
+    z-index: 2;
 }
+
 #vid-gradient{
     position: absolute;
     pointer-events: none;
@@ -11,7 +13,34 @@
     object-fit: cover;
     height: 80vh;
     z-index: 3;
-    
     background: rgb(10,10,10);
     background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,1) 100%);
+}
+#scroll-down{
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4 !important;
+ 
+}
+#scroll-down-arrow{
+    border-radius: 100px;
+    transition:all .2s ease-in-out;
+    width: 70px;
+    fill: rgb(133, 133, 133);
+    &:hover{
+        fill: rgb(185, 1, 1) !important;
+        transform: scale(110%) ;
+        box-shadow: 0px 0px 120px rgb(48, 0, 0) !important;
+    }
+    animation: pulse-effect-scroll-down .8s infinite alternate ease-in-out;
+    @keyframes pulse-effect-scroll-down {
+        0%{
+
+        }
+        100%{
+            box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.527); fill: rgb(255, 255, 255);
+        }
+    }
 }
