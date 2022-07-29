@@ -391,6 +391,78 @@ ul a {
   }
 }
 
+#Services {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+}
+@media (max-width: 900px) {
+  #Services {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#service-block {
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.13);
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 10px;
+}
+@media (max-width: 900px) {
+  #service-block {
+    width: clamp(16rem, 40%, 32rem);
+    height: 40vh;
+    padding: 0px;
+  }
+}
+
+#services-block-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 0px;
+  box-shadow: 0px 0px 100px rgb(0, 0, 0);
+  height: 60%;
+}
+
+#services-block-img-source {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 0px;
+}
+@media (max-width: 900px) {
+  #services-block-img-source {
+    border-radius: 0px 0px;
+  }
+}
+
+#services-block-text {
+  box-shadow: 0px 0px 100px rgb(0, 0, 0);
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 20px;
+}
+@media (max-width: 900px) {
+  #services-block-text {
+    border-radius: 0px 0px;
+  }
+}
+
 * {
   margin: auto 0;
   padding: 0;
