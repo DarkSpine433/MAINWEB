@@ -21,7 +21,7 @@ nav{
     pointer-events: none;
     height: 100vh;
     position: fixed;
-    top: 0px;
+    bottom: 0px;
     left: -40px;
     transition: all .15s ease-in-out;
     &:hover{
@@ -30,7 +30,17 @@ nav{
             transform: translatex(0%);
         }
     }
-    
+    @media (max-width:500px) {
+        width: 100%;
+        position: fixed;
+        flex-direction: row;
+        bottom: 0px;
+        padding: 0px;
+        transform: translateY(0%);
+        height: 10vh;
+        gap: 0%;
+        left: 0;
+    }
 }
 
 #LOGO-bar{
@@ -91,7 +101,7 @@ ul{
     -webkit-backdrop-filter: blur(4.3px);
     border: 1px solid rgba(255, 255, 255, 0.14);
     position: relative;
-    top: 50%;
+    top:  50%;
     width: min-content;
     display: flex;
     text-decoration: none;
@@ -105,6 +115,23 @@ ul{
         padding: 100px 17px 75px;
         
     }
+    @media (max-width:500px) {
+        width: 100%;
+        position: fixed;
+        flex-direction: row;
+        bottom: 0px;
+        padding: 15px 0px 80px 0px;
+        transform: translateY(0%);
+        height: 5rem;
+        gap: 20%;
+        border-radius: 0px 0px 0px 0px;
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.6px);
+        -webkit-backdrop-filter: blur(5.6px);
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      
+    }
     &:hover{
         height: 100vh;
         border-radius: 0px 20px 20px 0px;
@@ -112,8 +139,16 @@ ul{
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.6px);
         -webkit-backdrop-filter: blur(5.6px);
-        
         border: 1px solid rgba(255, 255, 255, 0.03);
+        @media (max-width:500px) {
+            height: 5rem;
+            border-radius: 0px 0px 0px 0px;
+            background: rgba(255, 255, 255, 0.01);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.6px);
+            -webkit-backdrop-filter: blur(5.6px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
         #menu-word{
             opacity: 0%;
             transform: rotate(90deg) translateY(-90%);
@@ -138,6 +173,9 @@ ul{
                 text-shadow: 0px 0px 3px rgb(255, 255, 255);
             }
         }
+        @media (max-width:500px) {
+            display: none;
+        }
     }
     li{
         transition: all .15s ease-in-out;
@@ -153,7 +191,13 @@ ul{
                 transform: translate(80px,-31px);
                 color: rgb(255, 255, 255);
                 text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
+                @media (max-width:500px) {
+                    display:none;
+                }
             }
+        }
+        @media (max-width:500px) {
+            transform: translateX(0%);
         }
         #description-menu-option{
             transition: all .15s ease-in-out;
@@ -161,6 +205,9 @@ ul{
             pointer-events: none;
             position: absolute;
             transform: translate(60px,-3px);
+            @media (max-width:500px) {
+               display: none;
+            }
         }
         #img-svg-menu-option{
             transition: all .15s ease-in-out;
@@ -168,7 +215,7 @@ ul{
             width: 35px;
           &:hover{
             color: rgb(48, 48, 48);
-        text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
+            text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
             fill: rgb(48, 48, 48);
           }
         }

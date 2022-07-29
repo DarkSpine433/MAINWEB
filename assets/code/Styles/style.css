@@ -104,7 +104,7 @@ nav {
   pointer-events: none;
   height: 100vh;
   position: fixed;
-  top: 0px;
+  bottom: 0px;
   left: -40px;
   transition: all 0.15s ease-in-out;
 }
@@ -113,6 +113,19 @@ nav:hover {
 }
 nav:hover li {
   transform: translatex(0%);
+}
+@media (max-width: 500px) {
+  nav {
+    width: 100%;
+    position: fixed;
+    flex-direction: row;
+    bottom: 0px;
+    padding: 0px;
+    transform: translateY(0%);
+    height: 10vh;
+    gap: 0%;
+    left: 0;
+  }
 }
 
 #LOGO-bar {
@@ -195,6 +208,24 @@ ul {
     padding: 100px 17px 75px;
   }
 }
+@media (max-width: 500px) {
+  ul {
+    width: 100%;
+    position: fixed;
+    flex-direction: row;
+    bottom: 0px;
+    padding: 15px 0px 80px 0px;
+    transform: translateY(0%);
+    height: 5rem;
+    gap: 20%;
+    border-radius: 0px 0px 0px 0px;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+}
 ul:hover {
   height: 100vh;
   border-radius: 0px 20px 20px 0px;
@@ -203,6 +234,17 @@ ul:hover {
   backdrop-filter: blur(5.6px);
   -webkit-backdrop-filter: blur(5.6px);
   border: 1px solid rgba(255, 255, 255, 0.03);
+}
+@media (max-width: 500px) {
+  ul:hover {
+    height: 5rem;
+    border-radius: 0px 0px 0px 0px;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
 }
 ul:hover #menu-word {
   opacity: 0%;
@@ -232,6 +274,11 @@ ul #menu-word {
     text-shadow: 0px 0px 3px rgb(255, 255, 255);
   }
 }
+@media (max-width: 500px) {
+  ul #menu-word {
+    display: none;
+  }
+}
 ul li {
   transition: all 0.15s ease-in-out;
   transform: translateX(-100%);
@@ -245,12 +292,27 @@ ul li:hover #description-menu-option {
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
 }
+@media (max-width: 500px) {
+  ul li:hover #description-menu-option {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  ul li {
+    transform: translateX(0%);
+  }
+}
 ul li #description-menu-option {
   transition: all 0.15s ease-in-out;
   opacity: 0%;
   pointer-events: none;
   position: absolute;
   transform: translate(60px, -3px);
+}
+@media (max-width: 500px) {
+  ul li #description-menu-option {
+    display: none;
+  }
 }
 ul li #img-svg-menu-option {
   transition: all 0.15s ease-in-out;
