@@ -79,12 +79,11 @@ nav{
 }
 ul{
     pointer-events: all;
-    padding: 100% 17px;
+    padding: 100px 17px 80px;
     justify-content: center;
     align-items: center ;
     align-content:  center;
     text-align:  center;
-  
     background: rgba(255, 255, 255, 0.12);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -101,6 +100,11 @@ ul{
     transform: translateY(-50%);
     transition: all .15s ease-in-out;
     height: 30vh;
+   
+    @media (max-height:900px) {
+        padding: 100px 17px 75px;
+        
+    }
     &:hover{
         height: 100vh;
         border-radius: 0px 20px 20px 0px;
@@ -156,7 +160,7 @@ ul{
             opacity: 0%;
             pointer-events: none;
             position: absolute;
-            transform: translate(60px,-35px);
+            transform: translate(60px,-3px);
         }
         #img-svg-menu-option{
             transition: all .15s ease-in-out;
