@@ -166,7 +166,7 @@ nav:hover li {
 
 ul {
   pointer-events: all;
-  padding: 80px 17px;
+  padding: 100% 17px;
   justify-content: center;
   align-items: center;
   align-content: center;
