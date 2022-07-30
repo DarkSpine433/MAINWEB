@@ -1,13 +1,14 @@
 #Services{    
     min-height: 100vh;
     display:grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     column-gap: 2%;
     justify-content: center;
     justify-items: center;
+    row-gap: 2%;
     @media (max-width:900px) {
         grid-template-columns: auto ;
-        gap: 10%;
+        row-gap: 4%;
     }
     
 }
@@ -22,6 +23,7 @@
     overflow-x: hidden;
     box-shadow: 0px 0px 50px rgb(0, 0, 0);
     @media (max-width:900px) {
+        height: 70vh;
         width: 90%;
         padding: 0px 0px;
         border-radius: 0px 0px 0px 0px;

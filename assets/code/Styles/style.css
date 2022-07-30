@@ -395,16 +395,17 @@ ul a {
 #Services {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   -moz-column-gap: 2%;
        column-gap: 2%;
   justify-content: center;
   justify-items: center;
+  row-gap: 2%;
 }
 @media (max-width: 900px) {
   #Services {
     grid-template-columns: auto;
-    gap: 10%;
+    row-gap: 4%;
   }
 }
 
@@ -421,6 +422,7 @@ ul a {
 }
 @media (max-width: 900px) {
   #service-block {
+    height: 70vh;
     width: 90%;
     padding: 0px 0px;
     border-radius: 0px 0px 0px 0px;
@@ -518,7 +520,6 @@ section {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  overflow: hidden;
   clear: both;
 }
 
