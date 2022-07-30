@@ -394,131 +394,69 @@ ul a {
 
 #Services {
   min-height: 100vh;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
   justify-content: center;
-  gap: 10%;
+  justify-items: center;
 }
 @media (max-width: 900px) {
   #Services {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 122%;
+    grid-template-columns: auto;
+    gap: 10%;
   }
 }
 
 #service-block {
-  width: 30%;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  border-radius: 20px 0px 0px 20px;
+  width: 25vw;
   height: 50vh;
-  display: flex;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.048);
-  overflow: hidden;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.055);
-  flex-direction: column;
-  gap: 20px;
-  padding: 30px;
-  border-radius: 10px;
-  transition: all 0.2s ease-in-out;
+  padding: 30px 10px;
+  background-color: rgba(15, 15, 15, 0.616);
+  overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
-#service-block:hover {
-  background: rgba(255, 255, 255, 0.089);
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.144);
-  border: 1px solid rgba(255, 255, 255, 0.144);
-  -webkit-backdrop-filter: blur(9px);
-          backdrop-filter: blur(9px);
+@media (max-width: 900px) {
+  #service-block {
+    width: 90%;
+    padding: 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+  }
 }
 #service-block:hover #services-block-text {
-  color: white;
-}
-#service-block:hover #services-click-to-see-more {
-  text-shadow: 0px 0px 10px rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  font-size: clamp(1rem, 1.2vw, 20rem);
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  width: 100%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  opacity: 100%;
-}
-#service-block:hover #services-block-img {
-  height: 100%;
-}
-@media (max-width: 900px) {
-  #service-block {
-    margin-top: 20%;
-    width: clamp(16rem, 40%, 32rem);
-    min-height: 50vh;
-    padding: 0px;
-    background: rgba(255, 255, 255, 0.13);
-    border: 1px solid rgba(255, 255, 255, 0.26);
-  }
-}
-@media (max-width: 500px) {
-  #service-block {
-    width: clamp(16rem, 80%, 32rem);
-    height: 70vh;
-    padding: 0px;
-  }
-}
-
-#services-block-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px 0px;
-  box-shadow: 0px 0px 100px rgb(0, 0, 0);
-  height: 30%;
-  transition: all 0.2s ease-in-out;
-}
-@media (max-width: 900px) {
-  #services-block-img {
-    max-height: 40%;
-  }
 }
 
 #services-click-to-see-more {
-  font-weight: bold;
-  opacity: 0%;
-  transition: all 0.2s ease-in-out;
-  font-size: clamp(1rem, 2vw, 20rem);
-  position: absolute;
-  left: 50%;
-  bottom: 100%;
-  width: 100%;
-  text-align: center;
-  transform: translate(-50%, -50%);
+  display: none;
 }
 
 #services-block-img-source {
   -o-object-fit: cover;
      object-fit: cover;
+  height: 30vh;
   width: 100%;
-  height: 100%;
-  border-radius: 20px 0px;
+  border-radius: 0px 50px;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
 }
 @media (max-width: 900px) {
   #services-block-img-source {
-    border-radius: 0px 0px;
+    border-radius: 0px 0px 0px 0px;
   }
 }
 
 #services-block-text {
-  color: rgb(116, 116, 116);
-  transition: all 0.1s ease-in-out;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  border-radius: 0px 20px;
+  padding: 20px 10px;
+  color: rgb(34, 34, 34);
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 900px) {
   #services-block-text {
-    border-radius: 0px 0px;
-    padding: 20px;
+    color: white;
+    text-align: center;
   }
 }
 
