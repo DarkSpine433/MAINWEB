@@ -44,6 +44,7 @@ nav{
 }
 
 #LOGO-bar{
+    background-color: re;
     position: absolute;
     justify-content: center;
     align-items: center ;
@@ -102,7 +103,7 @@ ul{
     align-content:  center;
     text-align:  center;
     background: rgba(255, 255, 255, 0.12);
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.3px);
     -webkit-backdrop-filter: blur(4.3px);
@@ -140,8 +141,9 @@ ul{
       
     }
     &:hover{
+
         height: 100vh;
-        border-radius: 0px 20px 20px 0px;
+        border-radius: 0px 0px 0px 0px;
         background: rgba(255, 255, 255, 0.01);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.6px);

@@ -129,6 +129,7 @@ nav:hover li {
 }
 
 #LOGO-bar {
+  background-color: re;
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -194,7 +195,7 @@ ul {
   align-content: center;
   text-align: center;
   background: rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.3px);
   -webkit-backdrop-filter: blur(4.3px);
@@ -237,7 +238,7 @@ ul {
 }
 ul:hover {
   height: 100vh;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 0px 0px 0px;
   background: rgba(255, 255, 255, 0.01);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.6px);
@@ -341,7 +342,7 @@ ul a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 80vh;
+  height: 90vh;
   z-index: 2;
 }
 
@@ -351,7 +352,7 @@ ul a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 80vh;
+  height: 90vh;
   z-index: 3;
   background: rgb(10, 10, 10);
   background: linear-gradient(180deg, rgba(10, 10, 10, 0) 0%, rgb(10, 10, 10) 100%);
@@ -392,6 +393,7 @@ ul a {
 }
 
 #Services {
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -402,7 +404,7 @@ ul a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0%;
+    gap: 122%;
   }
 }
 
@@ -411,28 +413,56 @@ ul a {
   height: 50vh;
   display: flex;
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.048);
   overflow: hidden;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  border: 1px solid rgba(255, 255, 255, 0.26);
+  border: 1px solid rgba(255, 255, 255, 0.055);
   flex-direction: column;
   gap: 20px;
-  padding: 25px;
+  padding: 30px;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+#service-block:hover {
+  background: rgba(255, 255, 255, 0.089);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.144);
+  border: 1px solid rgba(255, 255, 255, 0.144);
+  -webkit-backdrop-filter: blur(9px);
+          backdrop-filter: blur(9px);
+}
+#service-block:hover #services-block-text {
+  color: white;
+}
+#service-block:hover #services-click-to-see-more {
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-size: clamp(1rem, 1.2vw, 20rem);
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  opacity: 100%;
+}
+#service-block:hover #services-block-img {
+  height: 100%;
 }
 @media (max-width: 900px) {
   #service-block {
+    margin-top: 20%;
     width: clamp(16rem, 40%, 32rem);
-    height: 40vh;
+    min-height: 50vh;
     padding: 0px;
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.26);
   }
 }
 @media (max-width: 500px) {
   #service-block {
     width: clamp(16rem, 80%, 32rem);
-    height: 40vh;
+    height: 70vh;
     padding: 0px;
   }
 }
@@ -442,7 +472,26 @@ ul a {
      object-fit: cover;
   border-radius: 20px 0px;
   box-shadow: 0px 0px 100px rgb(0, 0, 0);
-  height: 60%;
+  height: 30%;
+  transition: all 0.2s ease-in-out;
+}
+@media (max-width: 900px) {
+  #services-block-img {
+    max-height: 40%;
+  }
+}
+
+#services-click-to-see-more {
+  font-weight: bold;
+  opacity: 0%;
+  transition: all 0.2s ease-in-out;
+  font-size: clamp(1rem, 2vw, 20rem);
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 #services-block-img-source {
@@ -459,15 +508,17 @@ ul a {
 }
 
 #services-block-text {
-  box-shadow: 0px 0px 100px rgb(0, 0, 0);
-  background-color: rgb(214, 214, 214);
+  color: rgb(116, 116, 116);
+  transition: all 0.1s ease-in-out;
   height: 100%;
   width: 100%;
+  text-align: center;
   border-radius: 0px 20px;
 }
 @media (max-width: 900px) {
   #services-block-text {
     border-radius: 0px 0px;
+    padding: 20px;
   }
 }
 
@@ -496,7 +547,7 @@ body {
 
 #gradient_effect {
   background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%);
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, rgb(0, 0, 0) 90%);
   position: fixed;
   height: 100vh;
   z-index: 99;
@@ -526,7 +577,13 @@ body {
 }
 
 section {
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow: hidden;
   clear: both;
+}
+
+#Welome {
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */
