@@ -1,0 +1,19 @@
+.slideUp-1 {
+    animation: slideUp .4s linear forwards;
+    @keyframes slideUp {
+        0% {
+            opacity: 0%;
+            transform: translateY(20%);
+        } 
+        100% {
+          opacity: 100%;
+          transform: translateY(0%);
+        }
+    }
+}  
+.slideUp-2{
+    animation: slideUp .4s linear forwards .2s;
+}
+.slideUp-3{
+    animation: slideUp .4s linear forwards .4s;
+}

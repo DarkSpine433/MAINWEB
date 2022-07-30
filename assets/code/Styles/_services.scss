@@ -12,7 +12,10 @@
     }
     
 }
-#service-block{
+#service-block-1,
+#service-block-2,
+#service-block-3{
+    opacity: 0;
     border: 1px solid rgba(255, 255, 255, 0.068);
     border-radius: 20px 0px 0px 20px;
     width: 25vw;

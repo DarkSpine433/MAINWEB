@@ -1,23 +1,17 @@
+//PRELOAD
 window.onload = function(){
-    // hide the preloader
+    
     document.querySelector(".preload").style.display = "none";
 };
 
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-10vh";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
-if(window.innerWidth <= 991){
-    // load mobile script
-    loadScriptFile('https://files.finsweet.com/webflowhacks/hack27-mobile.js');
+//ON SCROLL SHOW SERVICES
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.documentElement.scrollTop > 500) {
+    document.getElementById("service-block-1").className = "slideUp-1";
+    document.getElementById("service-block-2").className = "slideUp-2";
+    document.getElementById("service-block-3").className = "slideUp-3";
   }
-  else{ // viewportWidth width > 991
-    // load desktop script
-    loadScriptFile('https://files.finsweet.com/webflowhacks/hack27-desktop.js');
-  }
+}
+
