@@ -1,5 +1,6 @@
 #Services{    
     min-height: 100vh;
+    max-height: max-content !important;
     display:grid;
     grid-template-columns: auto auto auto;
     column-gap: 2%;
@@ -10,7 +11,6 @@
         grid-template-columns: auto ;
         row-gap: 4%;
     }
-    
 }
 #service-block-1,
 #service-block-2,
@@ -20,13 +20,14 @@
     border-radius: 20px 0px 0px 20px;
     width: 25vw;
     height: 50vh;
+    
     padding: 30px 10px;
     background-color: rgba(15, 15, 15, 0.616);
     overflow: scroll;
     overflow-x: hidden;
     box-shadow: 0px 0px 50px rgb(0, 0, 0);
     @media (max-width:900px) {
-        height: 70vh;
+        height:70vh;
         width: 90%;
         padding: 0px 0px;
         border-radius: 0px 0px 0px 0px;
@@ -34,16 +35,15 @@
     &:hover{
         #services-block-text{
             color: rgb(255, 255, 255);
-        }
+        }  
     }
-
 }
 
 #services-block-img{ 
    
 }
 #services-click-to-see-more{
-    display: none;
+ 
 }
 #services-block-img-source{
     object-fit: cover;

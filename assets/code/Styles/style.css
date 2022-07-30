@@ -189,10 +189,10 @@ ul {
   text-align: center;
   background: rgba(255, 255, 255, 0.12);
   border-radius: 5px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
   backdrop-filter: blur(4.3px);
   -webkit-backdrop-filter: blur(4.3px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(0, 0, 0, 0.14);
   position: relative;
   top: 50%;
   width: -webkit-min-content;
@@ -387,6 +387,9 @@ ul a {
 
 #Services {
   min-height: 100vh;
+  max-height: -webkit-max-content !important;
+  max-height: -moz-max-content !important;
+  max-height: max-content !important;
   display: grid;
   grid-template-columns: auto auto auto;
   -moz-column-gap: 2%;
@@ -430,10 +433,6 @@ ul a {
 #service-block-2:hover #services-block-text,
 #service-block-3:hover #services-block-text {
   color: rgb(255, 255, 255);
-}
-
-#services-click-to-see-more {
-  display: none;
 }
 
 #services-block-img-source {
@@ -497,6 +496,73 @@ ul a {
           animation: slideUp 0.4s linear forwards 0.4s;
 }
 
+#Contact {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  width: 100%;
+}
+
+footer {
+  border: none;
+}
+footer form {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  width: 100%;
+}
+footer form input {
+  font-size: clamp(0.8rem, 1vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 0px 20px black;
+  width: 60vw;
+  padding: 20px;
+  color: rgb(143, 143, 143);
+  background: rgb(26, 26, 26);
+}
+footer form input:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(20, 20, 20);
+  border: 1px solid rgba(255, 255, 255, 0.267);
+}
+@media (max-width: 900px) {
+  footer form input {
+    width: 90vw;
+  }
+}
+footer form input:focus {
+  border: 1px solid brown;
+  outline: none;
+}
+
+#Contact-Footer-form-input-email {
+  height: 5vh;
+}
+
+#Contact-Footer-form-input-Message {
+  height: 20vh;
+}
+
+#Contact-Footer-form-input-send {
+  font-size: clamp(0.8rem, 1vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  box-shadow: 0px 0px 20px black;
+  transition: all 0.2s ease-in-out;
+  height: 10vh;
+  cursor: pointer;
+  color: rgb(143, 143, 143);
+  background: rgb(26, 26, 26);
+}
+#Contact-Footer-form-input-send:hover {
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  color: rgb(255, 255, 255);
+  background: rgb(20, 20, 20);
+}
+
 * {
   margin: auto 0;
   padding: 0;
@@ -517,9 +583,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #0a0a0a;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 #gradient_effect {
@@ -551,13 +614,6 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(0, 0, 0);
-}
-
-section {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  clear: both;
 }
 
 #Welome {
