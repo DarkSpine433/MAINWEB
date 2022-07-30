@@ -9,7 +9,6 @@
 footer{
 border: none;
     form{
-       
         gap: 20px;
         display: grid;
         grid-template-columns: auto;
@@ -42,14 +41,10 @@ border: none;
     }
 }
 #Contact-Footer-form-input-email{
-    
     height: 5vh; 
-    
-  
 }
 #Contact-Footer-form-input-Message{
     height: 20vh;
-  
 }
 #Contact-Footer-form-input-send{
     z-index: 5;

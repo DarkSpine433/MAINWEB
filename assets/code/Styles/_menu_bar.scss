@@ -118,7 +118,6 @@ ul{
     transform: translateY(-50%);
     transition: all .15s ease-in-out;
     height: 30vh;
-   
     @media (max-height:900px) {
         padding: 100px 17px 75px;
         
@@ -141,7 +140,6 @@ ul{
       
     }
     &:hover{
-
         height: 100vh;
         border-radius: 0px 0px 0px 0px;
         background: rgba(255, 255, 255, 0.01);
@@ -193,7 +191,6 @@ ul{
         font-size: clamp(1rem, 1vw, 500rem);
         cursor: pointer;
         &:hover{
-            
             #description-menu-option{
                 
                 opacity: 100%;
