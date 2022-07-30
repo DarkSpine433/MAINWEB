@@ -1,25 +1,20 @@
 .preload{
     display: block;
     pointer-events:all;
-    background-color: rgb(12, 12, 12);
-    overflow: hidden;
-    height: 0vh;
-    width: 0vw;
-    z-index: 1000;
-    justify-content: center;
-    align-items:center ;
-    align-content: center;
-    text-align: center;
-}
-#vid-preload{
-  position: fixed;
+    position: fixed;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
     left: 0;
     object-fit: cover;
     z-index: 1000;
+    justify-content: center;
+    align-items:center ;
+    align-content: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
 }
+
 #content_preload{
     z-index: 1000;
     position: fixed;
