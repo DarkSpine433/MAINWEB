@@ -85,11 +85,16 @@
     }
 }
 #services-block-text{
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+    }
     padding: 20px 10px;
     color: rgb(61, 61, 61);
     transition: all .3s ease-in-out;
+    text-align: left !important;
     @media (max-width:900px) {
         color: white;
-        text-align: center;
+       
     }
 }

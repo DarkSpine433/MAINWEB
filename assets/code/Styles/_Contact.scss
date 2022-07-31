@@ -6,6 +6,11 @@
    width: 100%;
  
 }
+input[type=text] {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
 footer{
 border: none;
     form{
@@ -47,6 +52,7 @@ border: none;
     height: 20vh;
 }
 #Contact-Footer-form-input-send{
+    
     z-index: 5;
     border-radius: 5px;
     font-size: clamp(0.8rem, 1vw, 2rem);

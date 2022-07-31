@@ -490,11 +490,15 @@ ul a {
   padding: 20px 10px;
   color: rgb(61, 61, 61);
   transition: all 0.3s ease-in-out;
+  text-align: left !important;
+}
+#services-block-text h1 {
+  text-align: center;
+  text-transform: uppercase;
 }
 @media (max-width: 900px) {
   #services-block-text {
     color: white;
-    text-align: center;
   }
 }
 
@@ -539,6 +543,12 @@ ul a {
   grid-template-columns: auto;
   justify-content: center;
   width: 100%;
+}
+
+input[type=text] {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 80px;
 }
 
 footer {
