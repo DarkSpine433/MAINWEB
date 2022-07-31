@@ -17,6 +17,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
 
         <script defer src="./code/JavaScript/Index.js"></script>
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -123,7 +127,7 @@
                         <div id="services-block-text">
                             <h1>GUIDE TO YOUR DREAM BODY</h1>
                         </div>
-                        <a href="https://buy.stripe.com/test_6oE4hz9l45jL6yceUV">
+                        <a target="_blank" href="https://buy.stripe.com/test_6oE4hz9l45jL6yceUV">
                             <button>Order</button>
                         </a>
                 </div>
@@ -174,9 +178,18 @@
                     
                 </div>
             </section>
+
             <section id="About">
-               
+                <div id="about-bg-img">
+                    <img id="about-bg-img-source"src="https://i.ibb.co/pQmD46b/human-spine-with-brain-3-erzebet-s-removebg-preview-1.png" alt="human-spine-with-brain-3-erzebet-s-removebg-preview-1" border="0">
+                </div>
+               <div class="about-box about-box-1">
+                    <div id="about-box-content">
+
+                    </div>
+               </div>
             </section>
+            
             <section id="Contact">   
                 <footer>
                     <form action="https://formsubmit.co/c2f2285bcb4808e94218d37320540b73" method="POST" >
@@ -184,6 +197,7 @@
                         <input type="hidden" name="_subject" value="MESSAGE FROM MAIN WEBSITE!">
                         <input type="text" name="_honey" style="display:none">
                         <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://darkspine.netlify.app/#Contact">
                         <input id="Contact-Footer-form-input-email" type="email" name="email" class="form-control" placeholder="Type Your Email Address" required>
                         <input id="Contact-Footer-form-input-Message" type="text" name="Message" placeholder="Message" required>
                         <button id="Contact-Footer-form-input-send" type="submit">Send</button>
