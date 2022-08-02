@@ -1,9 +1,10 @@
 #Contact{
-    min-height: 100vh;
+    min-height: fit-content;
    display: grid;
    grid-template-columns: auto;
    justify-content: center;
    width: 100%;
+   margin-bottom: 30vh;
  
 }
 input[type=text] {

@@ -6,15 +6,16 @@
     column-gap: 2%;
     justify-content: center;
     justify-items: center;
-    row-gap: 2%;
     @media (max-width:900px) {
         grid-template-columns: auto ;
-        row-gap: 4%;
+        row-gap: 0%;
     }
 }
+
 #service-block-1,
 #service-block-2,
 #service-block-3{
+    
     opacity: 0;
     border: 1px solid rgba(255, 255, 255, 0.068);
     border-radius: 20px 0px 0px 20px;
@@ -31,6 +32,7 @@
         width: 90%;
         padding: 0px 0px 30px 0px;
         border-radius: 0px 0px 0px 0px;
+        margin-top: 15vh;
     }
     &:hover{
         #services-block-text{

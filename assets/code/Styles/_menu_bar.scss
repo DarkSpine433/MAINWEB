@@ -44,7 +44,6 @@ nav{
 }
 
 #LOGO-bar{
-    background-color: re;
     position: absolute;
     justify-content: center;
     align-items: center ;
@@ -66,7 +65,7 @@ nav{
 }
 #logo-bar-content{
     letter-spacing: 15px;
-    font-size: clamp(1rem, 1.1vw, 80rem);
+    font-size: clamp(0.9rem, 1.1vw, 80rem);
     color: white;
     text-shadow: 0px 0px 20px rgb(255, 255, 255);
     cursor: pointer;
@@ -89,7 +88,9 @@ nav{
         }
     }
     @media (max-width:500px) {
-        line-height: 1.4rem;
+        line-height: 1.5rem;
+        color: rgb(187, 187, 187);
+        text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
         
         
     }
@@ -123,20 +124,21 @@ ul{
         
     }
     @media (max-width:500px) {
-        width: 100%;
+        left: 50%;
+        
+        width:80%;
         position: fixed;
         flex-direction: row;
         bottom: 0px;
-        padding: 15px 0px 80px 0px;
-        transform: translateY(0%);
-        height: 5rem;
-        gap: 20%;
-        border-radius: 0px 0px 0px 0px;
-        background: rgba(255, 255, 255, 0.01);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.6px);
-        -webkit-backdrop-filter: blur(5.6px);
-        border: 1px solid rgba(255, 255, 255, 0.03);
+        padding: 7px 0px 3px;
+        transform: translateY(-70%) translateX(-50%);
+        height: min-content;
+        column-gap: 20%;
+        border-radius: 90px;
+        background: rgba(0, 0, 0, 0.13);
+        box-shadow: 0 0px 25px rgb(0, 0, 0);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.178);
       
     }
     &:hover{
@@ -148,13 +150,21 @@ ul{
         -webkit-backdrop-filter: blur(5.6px);
         border: 1px solid rgba(255, 255, 255, 0.03);
         @media (max-width:500px) {
-            height: 5rem;
-            border-radius: 0px 0px 0px 0px;
-            background: rgba(255, 255, 255, 0.01);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5.6px);
-            -webkit-backdrop-filter: blur(5.6px);
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            left: 50%;
+        
+        width:80%;
+        position: fixed;
+        flex-direction: row;
+        bottom: 0px;
+        padding: 7px 0px 3px;
+        transform: translateY(-70%) translateX(-50%);
+        height: min-content;
+        column-gap: 20%;
+        border-radius: 90px;
+        background: rgba(0, 0, 0, 0.13);
+        box-shadow: 0 0px 25px rgb(0, 0, 0);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.178);
         }
         #menu-word{
             opacity: 0%;
@@ -185,44 +195,63 @@ ul{
         }
     }
     li{
+        
         transition: all .15s ease-in-out;
         transform: translateX(-100%);
         letter-spacing: 1px;
         font-size: clamp(1rem, 1vw, 500rem);
         cursor: pointer;
         &:hover{
-            #description-menu-option{
-                
-                opacity: 100%;
+            #description-menu-option{ 
+                opacity: 100%;  
                 transform: translate(80px,-31px);
                 color: rgb(255, 255, 255);
                 text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
                 @media (max-width:500px) {
-                    display:none;
+                    font-weight: bold;
+                    color: rgb(255, 0, 0);
+                text-shadow: 0px 0px 10px rgb(255, 0, 0) !important;
+                transform: translate(-26.9%,20%);
+                    display: block; 
+                    text-transform: uppercase;
+                    letter-spacing: 10px;
                 }
             }
         }
+        
         @media (max-width:500px) {
             transform: translateX(0%);
         }
-        #description-menu-option{
+        #description-menu-option{  
+
             transition: all .15s ease-in-out;
             opacity: 0%;
             pointer-events: none;
             position: absolute;
-            transform: translate(60px,-31px);
             @media (max-width:500px) {
-               display: none;
+                font-size: 13px;
+                font-weight: bold;
+                color: rgb(255, 0, 0);
+                text-shadow: 0px 0px 10px rgb(255, 0, 0) !important;
+                transform: translate(-26.9%,20%);
+                display: block; 
+                text-transform: uppercase;
+                letter-spacing: 10px;
+               
             }
+           
         }
-        #img-svg-menu-option{
+        #img-svg-menu-option{  
+
             transition: all .15s ease-in-out;
             fill: rgb(255, 255, 255);
             width: 35px;
+            @media (max-width:500px) {
+                fill: rgb(255, 255, 255);
+            }
           &:hover{
-            color: rgb(48, 48, 48);
-            text-shadow: 0px 0px 10px rgb(0, 0, 0) !important;
-            fill: rgb(48, 48, 48);
+            
+            fill: rgb(155, 0, 0);
           }
         }
     }
