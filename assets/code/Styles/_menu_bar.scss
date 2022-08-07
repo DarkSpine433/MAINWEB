@@ -223,7 +223,7 @@ ul{
             transform: translateX(0%);
         }
         #description-menu-option{  
-
+            transform: translate(60px,-31px);
             transition: all .15s ease-in-out;
             opacity: 0%;
             pointer-events: none;
@@ -242,7 +242,7 @@ ul{
            
         }
         #img-svg-menu-option{  
-
+            fill: rgb(255, 255, 255);
             transition: all .15s ease-in-out;
             fill: rgb(255, 255, 255);
             width: 35px;
@@ -250,8 +250,11 @@ ul{
                 fill: rgb(255, 255, 255);
             }
           &:hover{
-            
-            fill: rgb(155, 0, 0);
+            fill: rgb(104, 104, 104);
+            @media (max-width:500px) {
+               
+                fill: rgb(155, 0, 0);
+            }
           }
         }
     }

@@ -328,6 +328,7 @@ ul li:hover #description-menu-option {
   }
 }
 ul li #description-menu-option {
+  transform: translate(60px, -31px);
   transition: all 0.15s ease-in-out;
   opacity: 0%;
   pointer-events: none;
@@ -346,6 +347,7 @@ ul li #description-menu-option {
   }
 }
 ul li #img-svg-menu-option {
+  fill: rgb(255, 255, 255);
   transition: all 0.15s ease-in-out;
   fill: rgb(255, 255, 255);
   width: 35px;
@@ -356,7 +358,12 @@ ul li #img-svg-menu-option {
   }
 }
 ul li #img-svg-menu-option:hover {
-  fill: rgb(155, 0, 0);
+  fill: rgb(104, 104, 104);
+}
+@media (max-width: 500px) {
+  ul li #img-svg-menu-option:hover {
+    fill: rgb(155, 0, 0);
+  }
 }
 ul a {
   text-decoration: none;
