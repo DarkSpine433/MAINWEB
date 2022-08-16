@@ -672,6 +672,7 @@ footer form input:focus {
   display: flex;
 }
 #about-bg-img {
+  display: none;
   overflow: hidden;
   z-index: 30;
   position: absolute;
@@ -728,6 +729,7 @@ footer form input:focus {
     filter: blur(0px);
     background-image: url(https://i.ibb.co/0rQ4V4S/tumblr-350912aac73382f38b4525d26d698819-b8b36022-1280.jpg);
     background-position: center;
+    color: rgb(255, 255, 255);
   }
   47% {
     background-position: top;
@@ -753,6 +755,7 @@ footer form input:focus {
     filter: blur(0px);
     background-image: url(https://i.ibb.co/0rQ4V4S/tumblr-350912aac73382f38b4525d26d698819-b8b36022-1280.jpg);
     background-position: center;
+    color: rgb(255, 255, 255);
   }
   47% {
     background-position: top;
@@ -773,9 +776,82 @@ footer form input:focus {
     background-image: url(https://i.ibb.co/K09SDVC/wp2483004.jpg);
   }
 }
+.about-box h1 {
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: clamp(1.3rem, 1.4vw, 10rem);
+  letter-spacing: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-orientation: upright;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  -webkit-animation: text-effect 10s infinite alternate ease-in-out;
+          animation: text-effect 10s infinite alternate ease-in-out;
+}
+@-webkit-keyframes text-effect {
+  0% {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  43% {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  57% {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+  }
+  100% {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+  }
+}
+@keyframes text-effect {
+  0% {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  43% {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  57% {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+  }
+  100% {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+  }
+}
 
 .about-box-1 {
   background-image: url(https://i.ibb.co/0rQ4V4S/tumblr-350912aac73382f38b4525d26d698819-b8b36022-1280.jpg);
+}
+
+.letter-effect {
+  -webkit-animation: text-effect-1 20s infinite alternate ease-in-out;
+          animation: text-effect-1 20s infinite alternate ease-in-out;
+}
+@keyframes text-effect {
+  0% {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+  }
+  43% {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+  }
+  57% {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+  100% {
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
 }
 
 * {

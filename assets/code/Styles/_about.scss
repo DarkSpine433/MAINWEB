@@ -10,7 +10,7 @@
     }
   
 }
-#about-bg-img{
+#about-bg-img{ display: none;
     overflow: hidden;
     z-index: 30;
     position: absolute;
@@ -35,6 +35,7 @@
     }
 }
 .about-box{
+  
     z-index: 29;
     transition: all .3s ease-in-out;
     overflow: hidden;
@@ -48,6 +49,7 @@
     background-position: center;
     &:hover{
         box-shadow: 0px 0px 50px rgb(0, 0, 0);
+      
     }
     @media (max-width:900px) {
         width:90%;
@@ -59,6 +61,7 @@
             filter: blur(0px); 
         background-image: url(https://i.ibb.co/0rQ4V4S/tumblr-350912aac73382f38b4525d26d698819-b8b36022-1280.jpg);
         background-position:center;
+        color: rgb(255, 255, 255);
         }
         47%{
             
@@ -85,16 +88,70 @@
 
       
     }
- 
+    h1{
+        text-transform: uppercase;
+        text-shadow: 0px 0px 10px rgb(255, 255, 255);
+        font-weight: bold; 
+        font-size: clamp(1.3rem,1.4vw,10rem);
+        letter-spacing: 10px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+       text-orientation: upright;
+        writing-mode: vertical-rl;
+        animation: text-effect 10s infinite alternate ease-in-out;
+        @keyframes text-effect  {
+            0%{
+                color: rgb(255, 255, 255);
+                text-shadow: 0px 0px 10px rgb(255, 255, 255);
+            }
+            43%{
+                color: rgb(255, 255, 255);
+                text-shadow: 0px 0px 10px rgb(255, 255, 255);
+            }
+            57%{
+                color: rgb(255, 0, 0);
+                text-shadow: 0px 0px 10px rgb(255, 0, 0);
+            }
+            100%{
+                color: rgb(255, 0, 0);
+                text-shadow: 0px 0px 10px rgb(255, 0, 0);
+            }
+            
+        }
+    }
 }
 .about-box-1{
-
     background-image: url(https://i.ibb.co/0rQ4V4S/tumblr-350912aac73382f38b4525d26d698819-b8b36022-1280.jpg);
 
 }
 
+.letter-effect{
+      color: rgb(255, 0, 0);
+            text-shadow: 0px 0px 10px rgb(255, 0, 0);  color: rgb(255, 0, 0);
+            text-shadow: 0px 0px 10px rgb(255, 0, 0);
+    animation: text-effect-1 20s infinite alternate ease-in-out ;
+    @keyframes text-effect  {
+        0%{
+            color: rgb(255, 0, 0);
+            text-shadow: 0px 0px 10px rgb(255, 0, 0);
+          
+        }
+        43%{
+            color: rgb(255, 0, 0);
+            text-shadow: 0px 0px 10px rgb(255, 0, 0);
+        }
+        57%{
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 0px 10px rgb(255, 255, 255);
+        }
+        100%{
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 0px 10px rgb(255, 255, 255);
+        }
+        
+    }
+}
 
 
 #about-box-content{
-
 }
