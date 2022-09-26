@@ -55,101 +55,19 @@
         width:90%;
     }
     animation: image-effect 10s infinite alternate ease-in-out;
-    @keyframes image-effect {
-
-       43%{
-            filter: blur(0px); 
-        background-image: url(https://i.ibb.co/0rQ4V4S/tumblr-350912aac73382f38b4525d26d698819-b8b36022-1280.jpg);
-        background-position:center;
-        color: rgb(255, 255, 255);
-        }
-        47%{
-            
-            background-position:top;
-        }
-        50%{
-            filter: blur(20px); 
-            background-position:bottom;
-        }
-        53%{
-            
-            background-position:top;
-        }
-        57%{ 
-            background-position:center;
-            filter: blur(0px); 
-            
-            background-image: url(https://i.ibb.co/K09SDVC/wp2483004.jpg);
-        }
-        100%{
-            
-            background-image: url(https://i.ibb.co/K09SDVC/wp2483004.jpg);
-        }
-
-      
-    }
+    background-image: url(https://i.ibb.co/K09SDVC/wp2483004.jpg);
+    background-size: cover;
     h1{
-        text-transform: uppercase;
-        text-shadow: 0px 0px 10px rgb(255, 255, 255);
-        font-weight: bold; 
-        font-size: clamp(1.3rem,1.4vw,10rem);
-        letter-spacing: 10px;
-        color: rgb(255, 255, 255);
-        text-align: center;
-       text-orientation: upright;
-        writing-mode: vertical-rl;
-        animation: text-effect 10s infinite alternate ease-in-out;
-        @keyframes text-effect  {
-            0%{
-                color: rgb(255, 255, 255);
-                text-shadow: 0px 0px 10px rgb(255, 255, 255);
-            }
-            43%{
-                color: rgb(255, 255, 255);
-                text-shadow: 0px 0px 10px rgb(255, 255, 255);
-            }
-            57%{
-                color: rgb(255, 0, 0);
-                text-shadow: 0px 0px 10px rgb(255, 0, 0);
-            }
-            100%{
-                color: rgb(255, 0, 0);
-                text-shadow: 0px 0px 10px rgb(255, 0, 0);
-            }
-            
-        }
+      
     }
 }
 .about-box-1{
-    background-image: url(https://i.ibb.co/0rQ4V4S/tumblr-350912aac73382f38b4525d26d698819-b8b36022-1280.jpg);
+   
 
 }
 
 .letter-effect{
-      color: rgb(255, 0, 0);
-            text-shadow: 0px 0px 10px rgb(255, 0, 0);  color: rgb(255, 0, 0);
-            text-shadow: 0px 0px 10px rgb(255, 0, 0);
-    animation: text-effect-1 20s infinite alternate ease-in-out ;
-    @keyframes text-effect  {
-        0%{
-            color: rgb(255, 0, 0);
-            text-shadow: 0px 0px 10px rgb(255, 0, 0);
-          
-        }
-        43%{
-            color: rgb(255, 0, 0);
-            text-shadow: 0px 0px 10px rgb(255, 0, 0);
-        }
-        57%{
-            color: rgb(255, 255, 255);
-            text-shadow: 0px 0px 10px rgb(255, 255, 255);
-        }
-        100%{
-            color: rgb(255, 255, 255);
-            text-shadow: 0px 0px 10px rgb(255, 255, 255);
-        }
-        
-    }
+     
 }
 
 
