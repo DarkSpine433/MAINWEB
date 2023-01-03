@@ -29,13 +29,24 @@ section {
   align-content: center;
   justify-items: center;
 }
+@media screen and (max-width: 484px) {
+  section {
+    padding: 0px;
+  }
+}
 
 ul {
   width: 200px;
   padding: 20px;
   background: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 84%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+@media screen and (max-width: 484px) {
+  ul {
+    width: 100%;
+    padding: 0px;
+  }
 }
 
 li {
