@@ -2,7 +2,7 @@
 html,
 body {
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: auto;
   padding: 0;
   border: 0;
 }
@@ -15,10 +15,12 @@ body {
   min-height: 100vh;
 }
 section {
+  padding: 20px;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 10vh;
+  row-gap: 5vh;
+  column-gap: 10%;
   justify-content: center;
   align-items: center;
   align-content: center;
