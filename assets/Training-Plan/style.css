@@ -1,4 +1,6 @@
-*, html, body {
+*,
+html,
+body {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
@@ -11,26 +13,32 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+  min-height: 100vh;
 }
 
 section {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   row-gap: 10vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
 }
 
 ul {
+  width: 200px;
   padding: 20px;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.048);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.336);
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 84%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
 li {
-  padding: 2% 0;
+  text-align: center;
+  font-size: large;
+  text-transform: uppercase;
+  list-style: inside;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */

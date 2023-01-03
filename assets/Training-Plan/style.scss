@@ -1,37 +1,54 @@
-*,html,body{
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0;
-    border: 0;
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
 }
-body{
-    color: rgb(255, 255, 255);
-    background-image: url(https://i.ibb.co/K09SDVC/wp2483004.jpg);
-    background-size: cover ;
-    background-repeat: no-repeat;
-    background-position: right;
-    
- 
+body {
+  color: rgb(255, 255, 255);
+  background-image: url(https://i.ibb.co/K09SDVC/wp2483004.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 100vh;
 }
-section{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    row-gap:10vh;
-
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10vh;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
 }
-ul{
-   padding: 20px;
-  /* From https://css.glass */
-background: rgba(255, 255, 255, 0.048);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.336);
+ul {
+  width: 200px;
+  padding: 20px;
+  background: rgb(0, 0, 0);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 58%,
+    rgba(0, 0, 0, 0) 84%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 58%,
+    rgba(0, 0, 0, 0) 84%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 58%,
+    rgba(0, 0, 0, 0) 84%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
-li{
-    padding: 2% 0;
+li {
+  text-align: center;
+  font-size: large;
+  text-transform: uppercase;
+  list-style: inside;
+  margin-bottom: 10px;
 }
-
-
